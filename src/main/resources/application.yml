@@ -6,11 +6,11 @@ server:
 spring:
   application:
     name: springboot-init
-  # ?? dev ??
+  # 默认 dev 环境
   profiles:
     active: dev
 
-  # ?????
+  # 数据库配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/my_dba
@@ -23,7 +23,12 @@ spring:
     port: 6379
     timeout: 5000
     password: 123456
-  # ?? swagger3
+  # 支持 swagger3
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+
+####自定义 ConfigConstant zh_CN en_US ####
+config:
+  #filePath: classpath:/static/file
+  filePath: D:\Environment\nginx-1.24.0\static\file

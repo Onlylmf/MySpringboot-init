@@ -17,6 +17,17 @@ public class ResultUtils {
     }
 
     /**
+     * 用于登录返回token
+     * @param data
+     * @param token
+     * @return
+     * @param <T>
+     */
+    public static <T> BaseResponse<T> success(T data,String token) {
+        return new BaseResponse<>(0, data, token);
+    }
+
+    /**
      * 失败
      *
      * @param errorCode

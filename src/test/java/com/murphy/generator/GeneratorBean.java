@@ -35,7 +35,7 @@ public class GeneratorBean {
 
 	@Test
 	public void generatorAll() throws Exception {
-		String entityPackageName = "com.murphy.model.sys";
+		String entityPackageName = "com.murphy.model.entity.sys";
 		String daoPackageName = "com.murphy.mapper.sys";
 		String servicePackageName = "com.murphy.service.sys";
 		String controllerPackageName = "com.murphy.controller.sys";
@@ -64,7 +64,7 @@ public class GeneratorBean {
 	} 
 	@Test
 	public void generatorEntity() throws Exception {
-		String packageName = "com.murphy.model.sys";
+		String packageName = "com.murphy.model.entity.sys";
 		String tableName = "sys_user";
 		CodeGenUtil.generatorEntity(tableName, packageName, dataSource);
 	} 
